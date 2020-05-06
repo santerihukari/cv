@@ -25,8 +25,11 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-external="slides/whoami.html"></section>
+				<section data-external="slides/it-skills.html"></section>
+				<section data-external="slides/other-skills.html"></section>
+				<section data-external="slides/interests.html"></section>
+				<section data-external="slides/job.html"></section>
 			</div>
 		</div>
 
@@ -42,6 +45,7 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/external/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
